@@ -6,6 +6,7 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.nauk0a.notesmvvm.databinding.ActivityMainBinding
 import com.nauk0a.notesmvvm.utilits.APP_ACTIVITY
+import com.nauk0a.notesmvvm.utilits.AppPreference
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         navController = Navigation.findNavController(this, R.id.nav_host_fragment)
         setSupportActionBar(mToolbar)
         title = getString(R.string.title)
-
+        AppPreference.getPreference(this)
 
 
     }
